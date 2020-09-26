@@ -1,0 +1,153 @@
+@import '../common.css';
+
+body {
+    font-family: 'Merri', 'Helvetica', serif;
+}
+
+.clock {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #3d3d3d;
+    background-color: #fff;
+    position: relative;
+    padding: 2rem
+}
+
+.hour {
+    height: 2px;
+    width: 30%;
+    background-color: #3d3d3d;
+    border-radius: 1px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 20%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+}
+
+.minute {
+    height: 2px;
+    width: 40%;
+    background-color: #2b6880;
+    border-radius: 1px;
+    position: absolute;
+    left: 10%;
+    top: calc(50% - 1px);
+    transform: rotate(120deg);
+    transform-origin: 100%;
+    opacity: 0.85;
+    /* animation: minuteHand 800ms linear 5000ms forwards; */
+}
+
+.second {
+    height: 2px;
+    width: 45%;
+    background-color: #b9b8b8;
+    border-radius: 1px;
+    position: absolute;
+    left: 5%;
+    top: calc(50% - 1px);
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    opacity: 0.65;
+    /* animation: secondHand 10000ms linear forwards; */
+}
+
+@media screen and (min-width: 568px) {
+    .clock {
+        border-width: 5px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .hour,
+    .minute,
+    .second {
+        height: 4px;
+        top: calc(50% - 2px);
+    }
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes secondHand {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(450deg);
+    }
+
+    100% {
+        transform: rotate(805deg);
+    }
+}
+
+@keyframes minuteHand {
+    0% {
+        transform: rotate(120deg);
+    }
+
+    100% {
+        transform: rotate(124deg);
+    }
+}
+
+/* -----------ALARM SECTION------------ */
+
+.alarm {
+    margin-top: 3rem;
+}
+
+.alarm__title {
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.alarm__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    margin: -10px auto 2rem
+}
+
+.alarm__item {
+    padding: 10px;
+    text-align: center;
+}
+
+.alarm__item button {
+    padding: 5px 8px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 200ms ease-in;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.alarm__item button.active {
+    background-color: #333;
+    color: #c4c4c4
+}
+
+@media screen and (min-width: 568px) {
+
+    .alarm__item button {
+        border-width: 2px;
+        font-size: 1.25rem;
+    }
+}

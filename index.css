@@ -1,0 +1,15 @@
+@import './common.css';
+
+ul,
+li {
+    list-style: none;
+}
+
+li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav {
+    padding: 2rem
+}

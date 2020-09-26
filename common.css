@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-Black.ttf');
+    font-family: 'Merri';
+    font-weight: bolder;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-BlackItalic.ttf');
+    font-family: 'Merri';
+    font-weight: bolder;
+    font-style: italic;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-Bold.ttf');
+    font-family: 'Merri';
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-BoldItalic.ttf');
+    font-family: 'Merri';
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-Light.ttf');
+    font-family: 'Merri';
+    font-weight: 300;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-LightItalic.ttf');
+    font-family: 'Merri';
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-Regular.ttf');
+    font-family: 'Merri';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('./fonts/Merriweather/Merriweather-Italic.ttf');
+    font-family: 'Merri';
+    font-weight: normal;
+    font-style: italic;
+}
